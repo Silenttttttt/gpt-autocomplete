@@ -17,6 +17,7 @@ This repository contains a Python script that uses OpenAI's GPT model to autocom
 - Python 3.x
 - `pyperclip` library
 - `pyautogui` library
+- `openai` library
 - OpenAI API key
 
 ## Installation
@@ -29,7 +30,7 @@ This repository contains a Python script that uses OpenAI's GPT model to autocom
 
 2. Install the required libraries:
    ```sh
-   pip install pyperclip pyautogui
+   pip install pyperclip pyautogui openai
    ```
 
 3. Ensure you have an OpenAI API key and save it in a file named `gpt_api_key.txt`.
