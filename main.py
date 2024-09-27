@@ -4,6 +4,7 @@ import pyperclip
 import pyautogui
 import time
 import os
+import sys
 
 # Read the API key from the file
 def load_api_key(file_path):
@@ -125,8 +126,17 @@ def main():
     # Set cursor to busy
     set_cursor_busy()
 
-    # Simulate Ctrl + A to select all text
-    pyautogui.hotkey('ctrl', 'a')
+    # Check the system argument
+    if len(sys.argv) > 1 and sys.argv[1] == '1':
+        # Simulate Shift + Home to select all text
+        pyautogui.hotkey('shift', 'home')
+    elif len(sys.argv) > 1 and sys.argv[1] == '2':
+        # Do neither
+        pass
+    else:
+        # Simulate Ctrl + A to select all text
+        pyautogui.hotkey('ctrl', 'a')
+    
     pyautogui.hotkey('ctrl', 'c')
 
     # Wait a moment to ensure the clipboard is updated
@@ -143,3 +153,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    
