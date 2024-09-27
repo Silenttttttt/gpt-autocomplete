@@ -36,12 +36,14 @@ This repository contains a Python script that uses OpenAI's GPT model to autocom
 
 ## Usage
 
-1. Run the script:
+1. Bind the execution of the script to a key to trigger it on command. This can be done using various tools depending on your operating system. For example, on Windows, you can use AutoHotkey, and on macOS, you can use Automator or a similar tool.
+
+2. Run the script:
    ```sh
    python main.py
    ```
 
-2. The script will:
+3. The script will:
    - Simulate `Ctrl + A` and `Ctrl + C` to copy the current text.
    - Retrieve the clipboard content.
    - Pass the clipboard content to the GPT model to generate an autocomplete continuation.
